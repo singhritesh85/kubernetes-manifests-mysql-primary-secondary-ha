@@ -6,18 +6,14 @@ metadata:
   name: mysql
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
 spec:
   podSelector:
     matchLabels:
       app.kubernetes.io/instance: mysql
-      app.kubernetes.io/managed-by: Helm
       app.kubernetes.io/name: mysql
       app.kubernetes.io/version: 8.4.0
-      helm.sh/chart: mysql-11.0.0
   policyTypes:
     - Ingress
     - Egress
@@ -34,10 +30,8 @@ metadata:
   name: mysql
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
 automountServiceAccountToken: false
 secrets:
   - name: mysql
@@ -48,10 +42,8 @@ metadata:
   name: mysql
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
 type: Opaque
 data:
   mysql-root-password: "RGV4dGVyQDEyMw=="
@@ -64,10 +56,8 @@ metadata:
   name: mysql-primary
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
     app.kubernetes.io/component: primary
 data:
   my.cnf: |-
@@ -108,10 +98,8 @@ metadata:
   name: mysql-secondary
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
     app.kubernetes.io/component: secondary
 data:
   my.cnf: |-
@@ -152,10 +140,8 @@ metadata:
   name: mysql-primary-headless
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
     app.kubernetes.io/component: primary
 spec:
   type: ClusterIP
@@ -176,10 +162,8 @@ metadata:
   name: mysql-primary
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
     app.kubernetes.io/component: primary
 spec:
   type: ClusterIP
@@ -201,10 +185,8 @@ metadata:
   name: mysql-secondary-headless
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
     app.kubernetes.io/component: secondary
 spec:
   type: ClusterIP
@@ -225,10 +207,8 @@ metadata:
   name: mysql-secondary
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
     app.kubernetes.io/component: secondary
 spec:
   type: ClusterIP
@@ -250,10 +230,8 @@ metadata:
   name: mysql-primary
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
     app.kubernetes.io/component: primary
 spec:
   replicas: 1
@@ -270,10 +248,8 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/instance: mysql
-        app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: mysql
         app.kubernetes.io/version: 8.4.0
-        helm.sh/chart: mysql-11.0.0
         app.kubernetes.io/component: primary
     spec:
       serviceAccountName: mysql
@@ -481,10 +457,8 @@ metadata:
   name: mysql-secondary
   labels:
     app.kubernetes.io/instance: mysql
-    app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: mysql
     app.kubernetes.io/version: 8.4.0
-    helm.sh/chart: mysql-11.0.0
     app.kubernetes.io/component: secondary
 spec:
   replicas: 1
@@ -501,10 +475,8 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/instance: mysql
-        app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/name: mysql
         app.kubernetes.io/version: 8.4.0
-        helm.sh/chart: mysql-11.0.0
         app.kubernetes.io/component: secondary
     spec:
       serviceAccountName: mysql
