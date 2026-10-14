@@ -680,5 +680,5 @@ spec:
         resources:
           requests:
             storage: "1Gi"
-        storageClassName: dexter
+        storageClassName: gp3   ###dexter
 ...
